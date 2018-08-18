@@ -1,0 +1,81 @@
+
+.header{
+    overflow: hidden;
+}
+.header ul{
+    padding-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+.header ul li{
+    float: left;
+    margin-right: 10px;
+}
+.header>a{
+    float: right;
+    margin-top:10px;
+}
+
+.game{
+    margin-top:10px;
+    border-top:1px solid green;
+}
+.game .gameNav{}
+.game .gameNav ul{
+    overflow: hidden;
+    margin-top:10px;
+}
+.game .gameNav ul li{
+    float: left;
+}
+.game .gameNav ul li a{
+    display: block;
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
+    background: yellow;
+    color: blue;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.game .gameCenter{}
+.game .gameCenter ul{
+    overflow: hidden;
+}
+.game .gameCenter ul li{
+    font-size:12px;
+    float: left;
+    margin-right:10px;
+}
+
+.game .gameXiaZhu{
+    margin-top:10px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    padding-top:20px;
+}
+.game .gameXiaZhu .XiaZhuHao{
+    overflow: hidden;
+}
+.game .gameXiaZhu .XiaZhuHao ul{
+    overflow: hidden;
+}
+.game .gameXiaZhu .XiaZhuHao ul li{
+    float: left;
+    margin: 0 5px;
+}
+
+.game .gameXiaZhu .gameList{
+    margin-top: 10px;
+}
+.game .gameXiaZhu .gameList table{
+    width: 100%;
+}
+.game .gameXiaZhu .gameList table td{
+    text-align: center;
+}
+.game .gameXiaZhu .gameList table tbody tr{
+    height: 50px;
+}

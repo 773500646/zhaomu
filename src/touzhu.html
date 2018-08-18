@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投注</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<!--header-->
+<div class="main">
+    <div class="header">
+        <ul>
+            <li id="aaa">尊贵的 <span style="color:red">昵称</span> |</li>
+            <li>可用：<span style="color:red">10</span> |</li>
+            <li>银行：<span style="color:red">10</span> |</li>
+            <li>积分：<span style="color:red">10</span></li>
+        </ul>
+        <script>
+            window.onload = function () {
+                function hello () {
+                    console.log('hello')
+                }
+                document.querySelector('#aaa').addEventListener('click',hello)
+                document.querySelector('#aaa').addEventListener('click',hello)
+                document.querySelector('#aaa').addEventListener('click',function(){
+                    console.log(2)
+                })
+
+                function aa (b) {
+                    var a = b||'e';
+                    var o = {
+                        aa:function(){
+                            console.log('a')
+                        },
+                        bb:function(){
+                            console.log('b')
+                        },
+                        cc:function(){
+                            console.log('c')
+                        },
+                        e:function(){
+                            console.log('e')
+                        }
+                    }
+                    o[a]();
+                }
+                aa()
+
+            }
+        </script>
+        <a href="login.html">退出</a>
+    </div>
+    <!-- 游戏-->
+    <div class="game">
+        <!-- 游戏列表-->
+        <div class="gameNav">
+            <p>游戏区：</p>
+            <ul>
+                <li><a href="index.html">幸运28</a></li>
+            </ul>
+        </div>
+        <!--游戏中心-->
+        <div class="gameCenter">
+            <ul>
+                <li><a href="">幸运28首页</a></li>
+                <li><a href="jilu.html">我的投注记录</a></li>
+            </ul>
+        </div>
+        <div class="gameXiaZhu">
+            <div class="XiaZhuHao">
+                <ul class="l">
+                    <li>第 <span style="font-weight: bold;color: red;">1234567</span>期</li>
+                    <li>60秒倒计时</li>
+                </ul>
+                <ul class="r">
+                    <li>今日盈利：<span style="color: red;">2345678</span></li>
+                    <li>参与：<span>8</span>期</li>
+                    <li>胜率：<span>80%</span></li>
+                </ul>
+            </div>
+            <div class="gameList">
+                <div class="XiaZhuHao">
+                    <ul class="l">
+                        <li>第 <span style="font-weight: bold;color: red;">1234567</span>期</li>
+                        <li>已投吧豆</li>
+                    </ul>
+                    <ul class="r">
+                        <li>我的吧豆：<span>000</span>|</li>
+                        <li>当前欲投吧豆：0</li>
+                        <li><button>确认投注</button></li>
+                        <li><button>放弃投注</button></li>
+                    </ul>
+                </div>
+                <div class="touzhuNumber">
+                    <table class="tlist mt10 tlist-p2">
+                        <thead>
+                        <tr>
+                            <th>号码</th>
+                            <th>当前赔率</th>
+                            <th>已投数</th>
+                            <th>选择</th>
+                            <th>投注</th>
+                            <th>倍数</th>
+                            <th>号码</th>
+                            <th>当前赔率</th>
+                            <th>已投数</th>
+                            <th>选择</th>
+                            <th>投注</th>
+                            <th>倍数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="cgcolor tlist-p2">
+                            <td>00</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk0" type="checkbox" onclick="mCheckBoxChange(this);" value="0" no="0" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num0" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="0" name="bet[0]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(0,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(0,2);">X2</a>
+                            </td>
+                            <td>14</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk14" type="checkbox" onclick="mCheckBoxChange(this);" value="14" no="14" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num14" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="14" name="bet[14]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(14,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(14,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>01</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk1" type="checkbox" onclick="mCheckBoxChange(this);" value="1" no="1" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num1" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="1" name="bet[1]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(1,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(1,2);">X2</a>
+                            </td>
+                            <td>15</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk15" type="checkbox" onclick="mCheckBoxChange(this);" value="15" no="15" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num15" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="15" name="bet[15]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(15,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(15,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>02</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk2" type="checkbox" onclick="mCheckBoxChange(this);" value="2" no="2" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num2" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="2" name="bet[2]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(2,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(2,2);">X2</a>
+                            </td>
+                            <td>16</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk16" type="checkbox" onclick="mCheckBoxChange(this);" value="16" no="16" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num16" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="16" name="bet[16]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(16,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(16,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>03</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk3" type="checkbox" onclick="mCheckBoxChange(this);" value="3" no="3" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num3" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="3" name="bet[3]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(3,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(3,2);">X2</a>
+                            </td>
+                            <td>17</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk17" type="checkbox" onclick="mCheckBoxChange(this);" value="17" no="17" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num17" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="17" name="bet[17]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(17,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(17,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>04</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk4" type="checkbox" onclick="mCheckBoxChange(this);" value="4" no="4" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num4" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="4" name="bet[4]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(4,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(4,2);">X2</a>
+                            </td>
+                            <td>18</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk18" type="checkbox" onclick="mCheckBoxChange(this);" value="18" no="18" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num18" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="18" name="bet[18]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(18,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(18,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>05</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk5" type="checkbox" onclick="mCheckBoxChange(this);" value="5" no="5" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num5" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="5" name="bet[5]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(5,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(5,2);">X2</a>
+                            </td>
+                            <td>19</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk19" type="checkbox" onclick="mCheckBoxChange(this);" value="19" no="19" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num19" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="19" name="bet[19]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(19,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(19,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>06</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk6" type="checkbox" onclick="mCheckBoxChange(this);" value="6" no="6" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num6" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="6" name="bet[6]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(6,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(6,2);">X2</a>
+                            </td>
+                            <td>20</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk20" type="checkbox" onclick="mCheckBoxChange(this);" value="20" no="20" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num20" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="20" name="bet[20]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(20,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(20,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>07</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk7" type="checkbox" onclick="mCheckBoxChange(this);" value="7" no="7" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num7" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="7" name="bet[7]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(7,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(7,2);">X2</a>
+                            </td>
+                            <td>21</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk21" type="checkbox" onclick="mCheckBoxChange(this);" value="21" no="21" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num21" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="21" name="bet[21]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(21,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(21,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>08</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk8" type="checkbox" onclick="mCheckBoxChange(this);" value="8" no="8" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num8" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="8" name="bet[8]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(8,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(8,2);">X2</a>
+                            </td>
+                            <td>22</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk22" type="checkbox" onclick="mCheckBoxChange(this);" value="22" no="22" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num22" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="22" name="bet[22]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(22,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(22,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>09</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk9" type="checkbox" onclick="mCheckBoxChange(this);" value="9" no="9" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num9" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="9" name="bet[9]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(9,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(9,2);">X2</a>
+                            </td>
+                            <td>23</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk23" type="checkbox" onclick="mCheckBoxChange(this);" value="23" no="23" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num23" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="23" name="bet[23]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(23,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(23,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>10</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk10" type="checkbox" onclick="mCheckBoxChange(this);" value="10" no="10" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num10" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="10" name="bet[10]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(10,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(10,2);">X2</a>
+                            </td>
+                            <td>24</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk24" type="checkbox" onclick="mCheckBoxChange(this);" value="24" no="24" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num24" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="24" name="bet[24]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(24,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(24,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>11</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk11" type="checkbox" onclick="mCheckBoxChange(this);" value="11" no="11" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num11" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="11" name="bet[11]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(11,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(11,2);">X2</a>
+                            </td>
+                            <td>25</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk25" type="checkbox" onclick="mCheckBoxChange(this);" value="25" no="25" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num25" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="25" name="bet[25]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(25,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(25,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>12</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk12" type="checkbox" onclick="mCheckBoxChange(this);" value="12" no="12" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num12" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="12" name="bet[12]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(12,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(12,2);">X2</a>
+                            </td>
+                            <td>26</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk26" type="checkbox" onclick="mCheckBoxChange(this);" value="26" no="26" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num26" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="26" name="bet[26]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(26,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(26,2);">X2</a>
+                            </td>
+                        </tr>
+                        <tr class="cgcolor tlist-p2">
+                            <td>13</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk13" type="checkbox" onclick="mCheckBoxChange(this);" value="13" no="13" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num13" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="13" name="bet[13]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(13,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(13,2);">X2</a>
+                            </td>
+                            <td>27</td>
+                            <td>-</td>
+                            <td>0<span class="gold"></span></td>
+                            <td>
+                                <input class="checkid" id="Chk27" type="checkbox" onclick="mCheckBoxChange(this);" value="27" no="27" name="id[]">
+                            </td>
+                            <td>
+                                <input type="text" id="Num27" class="tac" onblur="mTextChange(this);" onfocus="mTextFocus(this);" no="27" name="bet[27]" style="width:90px;" value="" placeholder="">
+                            </td>
+                            <td>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(27,0.5);">X0.5</a>
+                                <a class="btn-times" href="javascript:" onclick="m2Times(27,2);">X2</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
